@@ -4,10 +4,10 @@
 
 def get_item(items, index):
     # Bug to fix: invalid indexes should not crash the program.
-    if index < 0 and index >= len(index):
+    if index < 0 or index >= len(items):
         return "Index out of range"
 
     else:
-        return items 
+        return items[index] 
 
-print(get_item(["ola", "yosin", "ogo"], 2))
+print(get_item(["ola", "yosin", "ogo"], 2)) 
